@@ -368,8 +368,7 @@ class URL implements Serializable {
                 && StringUtils.isEmpty(password)) {
             return null;
         }
-        return (username == null ? "" : username)
-                + ":" + (password == null ? "" : password);
+        return username + (password == null ? "" : ":" + password);
     }
 
     public String getHost() {
